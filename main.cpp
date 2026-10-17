@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-    int a,b;
+    double a,b;
     char op;
 
     cout<<"<<<<<WELCOME TO MODERN CALCULATOR>>>>>"<<endl;
@@ -28,13 +28,7 @@ int main(){
                 cout<<"B SHOULD NOT BE EQUAL TO ZERO(0)"<<endl;
             }  
             break;
-        case('%'):
-            if(b!=0){
-                cout<<"REMINDER==="<<a%b<<endl;
-            }else{
-                cout<<"B SHOULD NOT BE EQUAL TO ZERO(0)"<<endl;
-            }  
-            break;
+        
         default:
             cout<<"INVALID OPERATOR "<<endl;   
             break;
