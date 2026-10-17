@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main(){
@@ -6,12 +6,11 @@ int main(){
     char op;
 
     cout<<"<<<<<WELCOME TO MODERN CALCULATOR>>>>>"<<endl;
-    
-    cin>>a,op,b;
 
-    while(1){
+    
+    while(true){
         cout<<"ENTER THE EQUATION YOU WANT TO SOLVE ==== ";
-        
+        cin>>a>>op>>b;
         switch(op){
         case('+'):
             cout<<"SUM==="<<a+b<<endl;
@@ -23,12 +22,23 @@ int main(){
             cout<<"MULTIPLICATION==="<<a*b<<endl;
             break;
         case('/'):
-            cout<<"DIVISION==="<<a/b<<endl;
-            cout<<"REMINDER==="<<a%b<<endl;
+            if(b!=0){
+                cout<<"DIVISION==="<<a/b<<endl;
+            }else{
+                cout<<"B SHOULD NOT BE EQUAL TO ZERO(0)"<<endl;
+            }  
+            break;
+        case('%'):
+            if(b!=0){
+                cout<<"REMINDER==="<<a%b<<endl;
+            }else{
+                cout<<"B SHOULD NOT BE EQUAL TO ZERO(0)"<<endl;
+            }  
             break;
         default:
-            cout<<"ANSWER==="<<a+b<<endl;
+            cout<<"INVALID OPERATOR "<<endl;   
             break;
+        }
     }
     return 0;
 }
